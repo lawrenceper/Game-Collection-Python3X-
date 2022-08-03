@@ -26,6 +26,7 @@ def mattack():
     you=input("Please press Enter to attack, or press S then enter to check your status.")
     if you=="s":
         print ("Your status is as follows: You currently have "+str(ahealth)+" health, and you're apponent has "+str(bhealth)+" health.")
+        mattack()
     elif you=="":
         print ("Attack")
         sleep(uniform(0.300000,1.300000))
@@ -38,7 +39,7 @@ def mattack():
             dlevel=dlevel+1
             print ("Level up! You and the computer can cause more damage per attack.")
             sleep(uniform(4.000000,5.000000))
-        difficultchance=randrange(1,11)
+        difficultchance=randrange(1,21)
         if difficultchance==1:
             hlevel=hlevel+1
             print ("Difficulty level changed! The computer will attack more often.")
@@ -63,7 +64,7 @@ def cattack():
         dlevel=dlevel+1
         print ("Level up! You and the computer can cause more damage per attack.")
         sleep(uniform(4.000000,5.000000))
-    difficultchance=randrange(1,11)
+    difficultchance=randrange(1,21)
     if difficultchance==1:
         hlevel=hlevel+1
         print ("Difficulty level changed! The computer will attack more often.")
